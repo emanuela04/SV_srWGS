@@ -1,0 +1,32 @@
+title: "SVs report"
+subtitle: "Report con le statistiche relative alle SVs"
+intro_text: "MultiQC reports summarise analysis results."
+report_header_info:
+  - Contact E-mail: "bosco@aosp.bo.it"
+
+run_modules:
+  - mosdepth
+  - custom_content
+
+
+custom_data:
+  survivor:
+    id: "survivor"
+    section_name: "SURVIVOR variant statistics"
+    description: "This table conteins the number of SVs based on chromosome"
+    plot_type: "bargraph"
+    format: ".tsv"
+    pconfig:
+      id: "survivor"
+      namespace: "SURVIVOR variant statistics"
+      table_title: "Variant statistics from survivor stats tool"
+      ylab: "number of SVs"
+
+  summary_reports:
+    id: "summary_reports"
+    section_name: "Summary Benchmark Reports"
+sp:
+  survivor:
+    fn: "*.stats"
+
+
